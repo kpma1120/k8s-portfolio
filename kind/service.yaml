@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: datalytic-service
+spec:
+  selector:
+    app: datalytic
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

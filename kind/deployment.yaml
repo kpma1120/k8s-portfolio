@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datalytic-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: datalytic
+  template:
+    metadata:
+      labels:
+        app: datalytic
+    spec:
+      containers:
+        - name: datalytic
+          image: localhost:5000/kind-datalytic.in
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

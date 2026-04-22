@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: kind-datalytic.in
+  name: kind-datalytic.in
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kind-datalytic.in
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: kind-datalytic.in
+    spec:
+      containers:
+      - image: localhost:5000/kind-datalytic.in
+        name: kind-datalytic-in-v2rpm
+        resources: {}
+status: {}

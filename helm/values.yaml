@@ -1,0 +1,5 @@
+appName: datalytic-in
+imageName: localhost:5000/kind-datalytic.in
+serviceName: datalytic-service
+serviceAddress: 127.0.0.1.sslip.io
+servicePort: 80
